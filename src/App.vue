@@ -1,4 +1,4 @@
-<script setup>
+  <script setup>
 import { ref, onMounted, computed, watch } from "vue";
 
 const todos = ref([])
@@ -22,6 +22,9 @@ const addTodo = () => {
     done: false,
     createdAt: new Date().getTime()
   })
+
+  input_content.value = ''
+  input_category.value = ''
 }
 
 const removeTodo = (todo) => {
